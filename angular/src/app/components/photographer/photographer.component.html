@@ -1,0 +1,71 @@
+<br>
+<br>
+<h4 class =title >   : צלמים     </h4>
+
+
+
+&nbsp;&nbsp;<label class="custom-select" style="width:200px;">
+   <select>
+     <option value="0">הכי פופולרי:</option>
+     <option value="1">הכי פופולרי:</option>
+     <option value="2">הכי רלוונטי</option>
+     <option value="3">לפי האלף בית </option>
+     <option value="4">מחיר:נמוך- גבוה</option>
+     <option value="5">מחיר:גבוה -נמוך</option>
+   </select>
+ <label >    :מיין לפי    </label>
+ <br>
+ <br>
+
+ <!-- 
+ border topלעשות קו עליון  -->
+ <body>
+        <div class="container">
+            <div class="center" style="border:groove">
+                    <br>
+                    <br> 
+
+                    <!-- לחצני ה  check box -->
+                    
+              <!-- לחצני ה  check box -->
+              <div class=location3>
+                <h4>:אזורים</h4>
+                כל האזורים <mat-checkbox  name="כל האזורים" (change)="changed($event)"></mat-checkbox> <br><br>
+                אזור ירושלים <mat-checkbox name="ירושלים" (change)="changed($event)"></mat-checkbox> <br><br>
+                הנגב <mat-checkbox name="הנגב" (change)="changed($event)"></mat-checkbox><br><br>
+                מרכז  <mat-checkbox name="מרכז" (change)="changed($event)"></mat-checkbox><br><br>
+                צפון <mat-checkbox name="הצפון" (change)="changed($event)"></mat-checkbox><br><br>
+              </div>
+
+
+              
+
+                    <div class=location1>
+                    <h4>:מאפינים נוספים</h4>
+                         צלם <mat-checkbox mat-checkbox  name="צלם" (change)="changed($event)"></mat-checkbox> <br><br>
+                        צלם +וידיאו<mat-checkbox name="צלם +וידיאו" (change)="changed($event)"></mat-checkbox> <br><br>
+                    </div>
+
+                    <br>
+                    <br> 
+                    <br>
+                    <br>
+
+
+            </div>
+        </div>
+ </body>
+
+<ul  >
+  <li *ngFor="let todo of Workers1"   >
+  <input type="image" value="{{todo.image}}"   >
+  <input type="text" value="{{todo.nameworker}}"  >
+  <input type="text" value="{{todo.selfphone}}"   >
+  <input type="text" value="{{todo.description}}" >
+  <input type="text" value="{{todo.category}}"    >
+  <input type="text" *ngFor="let v of todo.extraValues" value="{{v.value}}"/>
+  <input type="button" (click)="moreinff(todo)" value="למידע נוסף">
+  </li>
+</ul>
+  
+

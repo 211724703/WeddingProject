@@ -1,0 +1,61 @@
+<br>
+<br>
+<h4 class =title >: רבנים</h4>
+
+<!-- <p>: הכנס שם סידור פרחים</p> -->
+<!-- <input type="text"     /> -->
+
+ <!-- <input type="text"   [(ngModel)]="user.userId" />   -->
+<!--  -->
+     <!-- <button (click)="findByName()"  mat-button> חיפוס</button> -->
+
+ <label class="custom-select" style="width:200px;">
+   <select class=mm>
+     <option value="0">הכי פופולרי:</option>
+     <option value="1">הכי פופולרי:</option>
+     <option value="2">הכי רלוונטי</option>
+     <option value="3">לפי האלף בית </option>
+     <option value="4">מחיר:נמוך- גבוה</option>
+     <option value="5">מחיר:גבוה -נמוך</option>
+   </select>
+ <label >    :מיין לפי    </label>
+ <br>
+ <br>
+
+ <body>
+  <div class="container">
+      <div class="center" style="border:groove">
+              <br>
+              <br>
+              <br>
+              <br>
+              <!-- לחצני ה  check box -->
+              <div class=location3>
+                <h4>:אזורים</h4>
+                כל האזורים <mat-checkbox  name="כל האזורים" (change)="changed($event)"></mat-checkbox> <br><br>
+                אזור ירושלים <mat-checkbox name="ירושלים" (change)="changed($event)"></mat-checkbox> <br><br>
+                הנגב <mat-checkbox name="הנגב" (change)="changed($event)"></mat-checkbox><br><br>
+                מרכז  <mat-checkbox name="מרכז" (change)="changed($event)"></mat-checkbox><br><br>
+                הצפון <mat-checkbox name="הצפון" (change)="changed($event)"></mat-checkbox><br><br>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <!-- <input id="כולל קייטרינג" type="checkbox" ng-model="term_data[termslug]" ng-change="setFilters(termslug, term_data.slug,term_data[termslug])" class="ng-untouched ng-valid ng-dirty ng-valid-parse" tabindex="0" aria-checked="false" aria-invalid="false" style=""> -->
+      </div>
+  </div>
+</body>
+
+<ul  >
+  <li *ngFor="let todo of Workers1"   >
+  <input type="image" value="{{todo.image}}"   >
+  <input type="text" value="{{todo.nameworker}}"  >
+  <input type="text" value="{{todo.selfphone}}"   >
+  <input type="text" value="{{todo.description}}" >
+  <input type="text" value="{{todo.category}}"    >
+  <input type="text" *ngFor="let v of todo.extraValues" value="{{v.value}}"/>
+  <input type="button" (click)="moreinff(todo)" value="למידע נוסף">
+  </li>
+</ul>
+  

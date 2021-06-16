@@ -1,0 +1,33 @@
+.title{
+    text-align: right;
+}
+
+.center {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    border-top-color:rgb(110, 108, 108);
+    border-top-style:groove;
+    width: 100%;
+    text-align:right;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    // margin-left: 16px;
+    margin-right:16px;
+  }
+
+  .center {
+    // display: block;
+    justify-content: first baseline;
+    width: 100%;
+    // text-align:right;
+    display: flex;
+  }
+  .location1{
+    margin-right:auto;
+    margin-left: auto;
+  }
+  .location2{
+    margin-right:auto;
+    margin-left: auto;
+  }

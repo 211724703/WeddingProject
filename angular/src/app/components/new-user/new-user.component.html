@@ -1,0 +1,136 @@
+
+<!-- <h1>משתמשים חדשים</h1>
+<br><br> -->
+
+
+<!-- <app-users></app-users> -->
+<!-- <form>
+<div class=Details>
+   <div class="a">
+     <h4>:הכנס שם משתמש</h4>
+    <input type="text" name="userId" [(ngModel)]="customer.userId"   required />
+    <h4>:הכנס סיסמה</h4>
+    <input type="password" name="password" [(ngModel)]="customer.username" required/>
+    <h4>:הכנס סיסמה שוב </h4>
+    <input type="password"   name="paaswordc" [(ngModel)]="paaswordc"  required/> 
+    <br><br><br>
+ </div>
+   <div class="b">
+    <h4>:הכנס שם חתן</h4>
+    <input type="text" name="namchatan" [(ngModel)]="customer.namchatan" required />
+    <h4>:הכנס שם כלה</h4>
+    <input type="text" name="nameCala"  [(ngModel)]="customer.nameCala" required />
+    <h4>:תאריך חתונה</h4>
+    <input type="date" name="dateWedding" [ngModel]= "customer.dateWedding | date:'yyyy-MM-dd'" (ngModelChange)="customer.dateWedding = $event" required/>
+    <h4>תקציב החתונה</h4>
+    <input type="number" min="10000"   name="taktziv"  [(ngModel)]="customer.taktziv" required/> 
+    <h4>:מייל חתן</h4>
+    <input type="text" name="mailChatan" placeholder="Chatan@example.com"  [(ngModel)]="customer.mailChatan" required />
+    <h4>:מייל כלה</h4>
+    <input type="text" name="mailCala" placeholder="Cala@example.com"  [(ngModel)]="customer.mailCala" required/>
+    <h4>:מספר מוזמנים</h4>
+    <input type="number" name="misinvited" [(ngModel)]="customer.misinvited" required/> 
+ </div>
+</div>
+<br>
+<button (click) = "addcustomer()"  mat-button>אישור</button> &nbsp;&nbsp;
+<button type="button" (click) = "precentt()" mat-button>לשלב הבא</button>  -->
+<!-- לזמן את הפונקציה של הממוצע מהברירת מחדל -->
+<!-- </form> -->
+
+
+
+
+<h1>משתמשים חדשים</h1>
+<br><br>
+
+<!-- <app-users></app-users> -->
+<!-- (ngSubmit)="onFormSubmit(detailsForm) -->
+<form  class="formH form-group" #detailsForm="ngForm">
+<div class=Details>
+   <div class="a">
+     <h4>:הכנס שם משתמש</h4>
+    <input type="text" name="userId"[(ngModel)]="customer.userId" required />
+    <h4>:הכנס סיסמה</h4>
+    <input required type="password" id="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="Password" #Password="ngModel" [(ngModel)]="customer.username" />
+                <div *ngIf="Password.invalid && (Password.dirty || Password.touched)" class="alert alert-danger">
+
+                    <div *ngIf="Password.errors.required">
+                        <b>חובה להזין סיסמה</b>
+                    </div>
+                    <div *ngIf="Password.errors.pattern">
+                        <b> סיסמה חייבת להכיל לפחות 6 תווים, אות גדולה וקטנה ומספר</b>
+                    </div>
+
+                </div>
+      <h4>:אמת סיסמה</h4>
+      <input required type="password" id="Passwordc" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="Passwordc" #Passwordc="ngModel" [(ngModel)]="Passwordc" />
+      <div *ngIf="Passwordc.invalid && (Passwordc.dirty || Passwordc.touched)" class="alert alert-danger">
+
+          <div *ngIf="Passwordc.errors.required">
+              <b>חובה להזין סיסמה</b>
+          </div>
+          <div *ngIf="Passwordc.errors.pattern">
+              <b> סיסמה חייבת להכיל לפחות 6 תווים, אות גדולה וקטנה ומספר</b>
+          </div>
+
+      </div>
+    <br><br><br>
+ </div>
+   <div class="b"> 
+    <h4>:הכנס שם חתן</h4>
+    <input type="text" name="namchatan" id="namchatan" #namchatan = "ngModel" [(ngModel)]="customer.namchatan" required minlength="2" />
+    <div *ngIf="namchatan.invalid && (namchatan.dirty || namchatan.touched)" class="alert alert-danger">
+
+      <div *ngIf="namchatan.errors.required">
+          <b>שם החתן הוא שדה חובה</b>
+      </div>
+      <div *ngIf="namchatan.errors.minlength">
+          <b> שם החתן חייב להכיל מינימום שתי אותיות</b>
+      </div>
+      </div>
+    <h4>:הכנס שם כלה</h4>
+    <input type="text" name="nameCala" id="nameCala" #nameCala = "ngModel"  [(ngModel)]="customer.nameCala" minlength="2" />
+    <div *ngIf="nameCala.invalid && (nameCala.dirty || nameCala.touched)" class="alert alert-danger">
+      <div *ngIf="namchatan.errors.minlength">
+          <b> שם הכלה חייב להכיל מינימום שתי אותיות</b>
+      </div>
+      </div>
+    <h4>:תאריך חתונה</h4>
+    <input type="date" id="dateWedding" name="dateWedding" #dateWedding = "ngModel" [ngModel]= "customer.dateWedding | date:'yyyy-MM-dd'" (ngModelChange)="customer.dateWedding = $event"/>
+    <!-- <div *ngIf="dateWedding.errors.min">
+      <b> לא תקין</b>
+   </div> -->
+
+    <h4>תקציב החתונה</h4>
+    <input type="number" min="10000"   name="taktziv"  [(ngModel)]="customer.taktziv" required/> 
+    <h4>:מייל חתן</h4>
+    <input class="input-sm form-control" id="mailChatan" type="email" name="mailChatan" placeholder="Chatan@example.com" #mailChatan="ngModel"  [(ngModel)]="customer.mailChatan" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required />
+    <div *ngIf="mailChatan.invalid && (mailChatan.dirty || mailChatan.touched)" class="alert alert-danger">
+
+      <div *ngIf="mailChatan.errors.required">
+          <b>חובה למלא שדה זה</b>
+      </div>
+      <div *ngIf="mailChatan.errors.pattern">
+         <b>מייל לא תקין</b>
+      </div>
+
+  </div>
+  
+    <h4>:מייל כלה</h4>
+
+    <input class="input-sm form-control" id="mailCala" type="email" name="mailCala" placeholder="Cala@example.com" #mailCala="ngModel"  [(ngModel)]="customer.mailCala" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+    <div *ngIf="mailCala.invalid && (mailCala.dirty || mailCala.touched)" class="alert alert-danger">
+      <div *ngIf="mailCala.errors.pattern">
+         <b>מייל לא תקין</b>
+      </div>
+  </div>
+    <h4>:מספר מוזמנים</h4>
+    <input type="number" name="misinvited" [(ngModel)]="customer.misinvited" required/> 
+ </div>
+</div>
+<br>
+<button (click) = "addcustomer()"  mat-button>אישור</button> &nbsp;&nbsp;
+<button type="button" (click) = "precentt()" mat-button>לשלב הבא</button> 
+<!-- לזמן את הפונקציה של הממוצע מהברירת מחדל -->
+<!-- </form> -->

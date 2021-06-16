@@ -1,0 +1,89 @@
+    <br>
+    <br>
+    <h4 class =title >   : מוזיקה     </h4>
+    
+    <!-- //לסדר את המיקום בצורה טובה  -->
+    <!-- <p>: הכנס שם זמר</p>
+<input type="text"     /> -->
+
+ <!-- <input type="text"   [(ngModel)]="user.userId" />   -->
+<!--  -->
+     <!-- <button (click)="findByName()"  mat-button> חיפוס</button> -->
+     <label class="custom-select" style="width:200px;">
+       <select>
+         <option value="0">הכי פופולרי:</option>
+         <option value="1">הכי פופולרי:</option>
+         <option value="2">הכי רלוונטי</option>
+         <option value="3">לפי האלף בית </option>
+         <option value="4">מחיר:נמוך- גבוה</option>
+         <option value="5">מחיר:גבוה -נמוך</option>
+       </select>
+     <label >    :מיין לפי    </label>
+     
+
+
+     <body>
+      <div class="container">
+          <div class="center" style="border:groove">
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+
+                  <div class=location2>
+                    <h4>:אזורים</h4>
+                     כל האזורים <mat-checkbox  name="כל האזורים" (change)="changed($event)"></mat-checkbox> <br><br>
+                     אזור ירושלים<mat-checkbox  name="אזור ירושלים" (change)="changed($event)" ></mat-checkbox> <br><br>
+                     הנגב<mat-checkbox  name="הנגב" (change)="changed($event)"></mat-checkbox><br><br>
+                     מרכז  <mat-checkbox name="מרכז" (change)="changed($event)"></mat-checkbox><br><br>
+                     צפון <mat-checkbox  name="הצפון" (change)="changed($event)"></mat-checkbox><br><br>
+                   </div> 
+
+                  <div class=location2>
+                    <h4>זאנר</h4>
+                     מוזיקה חסידית  <mat-checkbox  name="חסידי" (change)="changed($event)"></mat-checkbox> <br><br>
+                     מוזיקה מזרחית   <mat-checkbox  name="מזרחי" (change)="changed($event)"></mat-checkbox> <br><br>
+                     מוזיקה אלטרנטיבית <mat-checkbox  name="אלטרנטיבי" (change)="changed($event)"></mat-checkbox><br><br>
+                  </div> 
+
+                  <div class=location3>
+                    <h4>קטגוריה </h4>
+                     זמר  <mat-checkbox  name="זמר" (change)="changed($event)"></mat-checkbox> <br><br>
+                     Dg  <mat-checkbox  name="dg" (change)="changed($event)"></mat-checkbox> <br><br>
+                     תזמורת <mat-checkbox  name="תזמורת" (change)="changed($event)"></mat-checkbox><br><br>
+                  </div> 
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+          </div>
+      </div>
+    </body>
+
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+
+<ul  >
+  <li *ngFor="let todo of Workers1"   >
+  <input type="image" value="{{todo.image}}"   >
+  <input type="text" value="{{todo.nameworker}}"  >
+  <input type="text" value="{{todo.selfphone}}"   >
+  <input type="text" value="{{todo.description}}" >
+  <input type="text" value="{{todo.category}}"    >
+  <input type="text" *ngFor="let v of todo.extraValues" value="{{v.value}}"/>
+  <input type="button" (click)="moreinff(todo)" value="למידע נוסף">
+  </li>
+</ul>
+  
+
+                
+

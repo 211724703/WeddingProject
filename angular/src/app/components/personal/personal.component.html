@@ -1,0 +1,49 @@
+ <h1>איזור אישי</h1>
+<br><br> 
+
+
+
+<!-- <app-users></app-users> -->
+<form>
+<div class=Details>
+   <div class="a">
+     <h4>:הכנס שם משתמש</h4>
+    <input type="text"   required />
+    <h4>:הכנס סיסמה</h4>
+    <input type="password"  required/>
+    <h4>:הכנס סיסמה שוב </h4>
+    <input type="password"   required/> 
+    <br><br><br> 
+
+ </div>
+   <div class="b">
+    <h4>:הכנס שם חתן</h4>
+    <input type="text"   required />
+    <h4>:הכנס שם כלה</h4>
+    <!-- [value]="{{user.namCala}}" -->
+    <input type="text"  value="{{nameCala}}" required />
+    <h4>:תאריך חתונה</h4>
+    <!-- [(value)]="{{user.dateWedding}}" -->
+    <input type="date"  required/>
+    <h4>תקציב החתונה</h4>
+    <input type="number" min="10000"    required/> 
+    <h4>:מייל חתן</h4>
+    <input type="text"  placeholder="Chatan@example.com"   required />
+    <h4>:מייל כלה</h4>
+    <input type="text" placeholder="Cala@example.com"  required/>
+    <h4>:מספר מוזמנים</h4>
+    <input type="number"   required/> 
+ </div> 
+</div> 
+
+</form>
+          <!-- עידכון לקוח -->
+<button  class="bb" (click) = "updatecustomer()"  mat-button>עידכון הפרטים</button> &nbsp;&nbsp;
+  <!-- בעיקרון אמור ליהיות שליחה גם לעידכון האחוזים נבדוק אם להביא את אותן האחוזים או לא  -->
+<button type="button" (click) = "precentt()" mat-button>לשלב הבא</button>  &nbsp;&nbsp;
+
+<button type="button" (click) = "delete()" mat-button> מחיקת לקוח</button>  &nbsp;&nbsp;
+
+
+
+<div class="">.</div>

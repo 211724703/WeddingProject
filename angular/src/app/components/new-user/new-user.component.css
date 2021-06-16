@@ -1,0 +1,45 @@
+/* .example-full-width{
+   
+    text-align: right; 
+    width:300px;
+   
+    display: block; 
+
+}
+/* #i{
+//   position: absolute;
+//   left: 800px;
+ margin-left:80%;
+
+} */
+
+h1{
+    text-align:center;
+}  
+/* Details{
+    text-align: right;
+} */
+
+.Details{
+    justify-content: first baseline;
+  display: flex;
+}
+.a{
+    margin-right:auto;
+    margin-left: auto;
+  }
+  .b{
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+
+
+  /* .center {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 100%;
+    text-align:right;
+  } */
+  

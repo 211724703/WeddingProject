@@ -1,0 +1,134 @@
+<div class="panel">
+<h1>פרסם אצלינו</h1>
+<h3> אתר "מזל טוב" מפעיל קבוצת אתרי אינטרנט צרכניים מותאמים לצרכן החרדי,
+    מוכיח פעם נוספת כי בהבנה נכונה לליבו ולצרכיו של הצרכן ובידע טכנולוגי גבוה ניתן ליצור פלטפורמה ייעודית למגזר החרדי
+    שמחד תשמור על כל כללי ההלכה והצניעות ומאידך תעניק לגולש חוויית גלישה נעימה ומקצועית שתביא בפניו
+    בצורה הנוחה והנעימה ביותר את מירב המידע הדרוש לו בטרם הוא מבצע את הרכישות לשמחתו בסכומי עתק.
+    
+    כאתר האינטרנט המוביל והמשפיע בתחום השמחות והארועים למגזר החרדי בישראל, ומתוך הכרת התחום וצרכי המגזר –
+    ממפעיל האתר מחלקת פרסום מקצועית וממוקדת.
+    מחלקת הפרסום של האתר מנוהלת ע"י אנשי מקצוע בעלי ותק וניסיון של שנים רבות בתחום הפרסום בכלל ובמגזר בפרט,
+    כשהמחלקה כולה מורכבת, ממנהלי לקוחות מקצועיים ומנוסים, המתאימים את חבילות הפרסום האפקטיביות,
+    הממוקדות והיעילות ביותר עבור המפרסם. בעקבות הניסיון הרב שנצבר במשך שנות הפעילות והתוצאות המבורכות ב"ה,
+    הלקוחות המפרסמים באתר יודעים, כי הם מקבלים את עסקת הפרסום הטובה ביותר עבורם ועונה באופן מדויק לצרכים שלהם.
+    באתר כל לקוח זוכה ליחס אישי ונבנית עבורו תוכנית פרסום כוללת המותאמת לצרכיו המדוייקים.
+    לא פלא שזכינו ובסיעתא דשמיא, לקוחותינו מחדשים עסקאות מידי שנה בשלל האתרים של הקבוצה. אתם מוזמנים לנסות ולהיווכח בעצמכם!
+    <br><br><br><br>
+    ליצירת קשר ותיאום פגישה עם מנהל לקוחות אישי שילווה אתכם בפרסום שלכם, שלחו מייל למנהל הקבוצה
+     .ונשמח לצרף אתכם למשפחת לקוחות של האתר הנהנים משתוף הפעולה איתנו</h3>
+
+
+
+   
+ <div class ="center"> 
+
+    <!-- <div  class ="location2">
+        <h3>:לפרטים ולהצעת מחיר אטרקטיבית עבור העסק שבבעלותך</h3> 
+        <h4>: הכנס שם</h4>
+          <input type="text"  placeholder="חובה לרשום שם"   required />
+          <h4>:הכנס מייל </h4>
+          <input type="text"  placeholder="חובה לרשום מייל"  required />
+          <h4>:הודעה </h4>
+          <input type="textbox"  placeholder="חובה לרשום הודעה "  required/> 
+          <br><br><br>
+       </div> -->
+
+    <div  class ="location2">
+     <h3>:לפרטים ולהצעת מחיר אטרקטיבית עבור העסק שבבעלותך</h3> 
+     <h4>: הכנס שם</h4>
+       <input type="text" name="Nameworker" placeholder="חובה לרשום שם" [(ngModel)]="worker.Nameworker"  required />
+       <h4>:הכנס מייל </h4>
+       <input type="text" name="Mailworker" placeholder="חובה לרשום מייל"  [(ngModel)]="worker.Mailworker" required />
+       <h4>:הודעה </h4>
+       <input type="textbox"  placeholder="חובה לרשום הודעה " name="message" [(ngModel)]="worker.message"  required/> 
+       <br><br><br>
+    </div>
+
+   <div class ="location1">
+    <br><br><br><br>
+    <h4>משרד: 072-3902222</h4>
+    <h4>נייד: 052-7200900</h4>
+    <h4>פקס: 077-4704399</h4>
+    <h4> WonderWedding@gmail.co.il :מייל </h4>
+   </div>
+
+</div>
+   
+<button  class= "location"  (click) = "Approval()"  mat-button>אישור</button>
+        
+        <!-- </div>end ngIf: routeData.data.posts[0].content !='' -->
+        <!-- <div class="flex-half">
+            <form name="footerForm" class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-email" novalidate="" ng-submit="sendMail()" style="">
+                <fieldset class="mdb-form-group input-group"> -->
+                    <!-- ngIf: !routeData.data.title_contact -->
+                   <!-- end ngIf: routeData.data.title_contact
+                   <div class="form-group is-empty">
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-class="{ 'has-error' : footerForm.name.$invalid &amp;&amp;  footerForm.name.$dirty||footerForm.name.$touched }" id="inputFullname" name="name" ng-model="footer_names" placeholder="שם ושם משפחה" required="" aria-required="true" aria-invalid="true" style="">
+                        <div ng-show="footerForm.$submitted || footerForm.name.$touched" aria-hidden="true" class="ng-hide" style="">
+                            <div class="text-danger" ng-show="footerForm.name.$error.required" aria-hidden="false">חובה לרשום שם
+                            </div>
+                        </div>
+                    <span class="material-input"></span></div>
+                    <div class="form-group is-empty">
+                        <input type="email" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-pattern ng-valid-email" ng-class="{ 'has-error' : footerForm.email.$invalid &amp;&amp;  footerForm.email.$dirty ||footerForm.email.$touched }" id="inputEmail" name="email" ng-model="footer_email" placeholder="דואר אלקטרוני" required="" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" aria-required="true" aria-invalid="true" style="">
+                        <div ng-show="footerForm.$submitted || footerForm.email.$touched" aria-hidden="true" class="ng-hide" style="">
+                        <span class="text-danger" ng-show="footerForm.email.$error.required" aria-hidden="false">חובה לרשום מייל</span>
+                        <span class="text-danger ng-hide" ng-show="footerForm.email.$error.pattern ||   footerForm.email.$error.email" aria-hidden="true" style="">מייל לא תקין</span>
+                        </div>
+                    <span class="material-input"></span></div>
+                    <div class="form-group is-empty">
+                    <textarea type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-class="{ 'has-error' : footerForm.message.$invalid &amp;&amp; footerForm.message.$dirty||footerForm.message.$touched }" name="message" id="inputMessage" ng-model="footer_message" placeholder="תוכן ההודעה" rows="4" required="" aria-multiline="true" aria-required="true" aria-invalid="true" style=""></textarea>
+                        <div ng-show="footerForm.$submitted || footerForm.message.$touched" aria-hidden="true" class="ng-hide" style="">
+                            <div class="text-danger" ng-show="footerForm.message.$error.required" aria-hidden="false">חובה לרשום
+                                הודעה
+                            </div>
+                        </div>
+                    <span class="material-input"></span></div>
+                    <div class="form-group">
+                        <button ng-disabled="footerForm.$invalid" type="submit" class="btn btn-primery btn-lg" aria-disabled="true" disabled="disabled">
+                            שלח
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+ -->
+
+
+
+
+
+
+<!-- <fieldset class="mdb-form-group input-group"> -->
+    <!-- ngIf: !routeData.data.title_contact
+    ngIf: routeData.data.title_contact<h3 ng-if="routeData.data.title_contact" ng-bind=" routeData.data.title_contact" class="ng-binding ng-scope" >לפרטים ולהצעת מחיר אטרקטיבית עבור העסק שבבעלותך:</h3>end ngIf: routeData.data.title_contact
+    <div class="form-group is-empty has-error">
+        <input type="text" class="form-control ng-dirty ng-valid-parse ng-touched has-error ng-invalid ng-invalid-required" ng-class="{ 'has-error' : footerForm.name.$invalid &amp;&amp;  footerForm.name.$dirty||footerForm.name.$touched }" id="inputFullname" name="name" ng-model="footer_names" placeholder="שם ושם משפחה" required="" aria-required="true" aria-invalid="true" >
+        <div ng-show="footerForm.$submitted || footerForm.name.$touched" aria-hidden="false">
+            <div class="text-danger" ng-show="footerForm.name.$error.required" aria-hidden="false >חובה לרשום שם
+            </div>
+        </div>
+    <span class="material-input"></span></div>
+    <div class="form-group is-empty has-error">
+        <input type="email" class="form-control ng-invalid ng-touched has-error ng-dirty ng-valid-email ng-invalid-required ng-valid-pattern" ng-class="{ 'has-error' : footerForm.email.$invalid &amp;&amp;  footerForm.email.$dirty ||footerForm.email.$touched }" id="inputEmail" name="email" ng-model="footer_email" placeholder="דואר אלקטרוני" required="" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" aria-required="true" aria-invalid="true" >
+        <div ng-show="footerForm.$submitted || footerForm.email.$touched" aria-hidden="false" >
+        <span class="text-danger" ng-show="footerForm.email.$error.required" aria-hidden="false" >חובה לרשום מייל</span>
+        <span class="text-danger ng-hide" ng-show="footerForm.email.$error.pattern ||   footerForm.email.$error.email" aria-hidden="true" >מייל לא תקין</span>
+        </div>
+    <span class="material-input"></span></div>
+    <div class="form-group is-empty">
+    <textarea type="text" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched has-error" ng-class="{ 'has-error' : footerForm.message.$invalid &amp;&amp; footerForm.message.$dirty||footerForm.message.$touched }" name="message" id="inputMessage" ng-model="footer_message" placeholder="תוכן ההודעה" rows="4" required="" aria-multiline="true" aria-required="true" aria-invalid="true" ></textarea>
+        <div ng-show="footerForm.$submitted || footerForm.message.$touched" aria-hidden="false">
+            <div class="text-danger" ng-show="footerForm.message.$error.required" aria-hidden="false">חובה לרשום
+                הודעה
+            </div>
+        </div>
+    <span class="material-input"></span></div>
+    <div class="form-group">
+        <button ng-disabled="footerForm.$invalid" type="submit" class="btn btn-primery btn-lg" aria-disabled="true" disabled="disabled">
+            שלח
+        </button>
+    </div>
+</fieldset> -->

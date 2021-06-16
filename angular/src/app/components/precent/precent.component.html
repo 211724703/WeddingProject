@@ -1,0 +1,34 @@
+<br><br>
+<h2> היי, חילקנו לכם את התקציב </h2>
+<br>
+<h2> :) אם בא לכם להחליט בעצמכם הכל פתוח </h2>
+<br><br><br>
+
+<!-- <span *ngFor="let item of typeOfWorker"><a class = "location" routerLink ="{{item.routerLink}}">{{item.nametype}}</a> &nbsp;&nbsp;</span> -->
+
+
+<!-- <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; סידור פרחים &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; צלם&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;קייטרינג&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;מוזיקה &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;אולם</h3> -->
+<input type="number"  *ngFor="let item of group"   [ngModelOptions]="{standalone: true}" (change)="aa(0)" [(ngModel)]="this.options.series[0]['data'][0]['y']">
+ 
+<!-- <mat-form-field *ngFor="let item of group" appearance="fill">
+  <mat-label  >{{lot.Name}}</mat-label>
+  <input  name={{lot.Name}} matInput>
+</mat-form-field> -->
+<input type="number" [ngModelOptions]="{standalone: true}" (change)="aa(0)" [(ngModel)]="this.options.series[0]['data'][0]['y']"> -->
+<input type="number" [ngModelOptions]="{standalone: true}" (change)="aa(1)" [(ngModel)]="this.options.series[0]['data'][1]['y']">
+<input type="number" [ngModelOptions]="{standalone: true}" (change)="aa(2)" [(ngModel)]="this.options.series[0]['data'][2]['y']">
+<input type="number" [ngModelOptions]="{standalone: true}" (change)="aa(3)" [(ngModel)]="this.options.series[0]['data'][3]['y']">
+<input type="number" [ngModelOptions]="{standalone: true}" (change)="aa(4)" [(ngModel)]="this.options.series[0]['data'][4]['y']">
+
+
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+    <!-- This pie chart shows how the chart legend can be used to provide -->
+    <!-- information about the individual slices. -->
+  </p>  
+  <!-- <div [chart]="chart"></div> -->
+</figure>
+<br><br>
+<input type="button" (click)="mmoza()" value="אישור">

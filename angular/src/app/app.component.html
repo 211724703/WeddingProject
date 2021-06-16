@@ -1,0 +1,43 @@
+
+
+
+<!-- קישורי הדפים למעלה -->
+<div> 
+    
+    <p class="img">
+        <img class="img" src="assets\img\לוגו אילה (1).png">
+    </p> 
+     
+        <input type="text"  placeholder="Search.." name="search"[(ngModel)]="work.nameworker">
+        <button type="submit" (click)="Getworker()" ><i class="fa fa-search"></i></button>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> &nbsp;&nbsp;
+      
+        <!-- <input type="button" (click)="moreinff(todo)" value="למידע נוסף"> -->
+
+<!-- 
+    <a  class = "location" routerLink = "hall"> אולמות </a> &nbsp;&nbsp;
+    <a  class = "location" routerLink = "rabbi" > קייטרינג     </a> &nbsp;&nbsp;
+    <a  class = "location" routerLink = "photographer" >צלמים +וידיאו  </a>&nbsp;&nbsp;
+    <a  class = "location" routerLink = "music" > מוזיקה   </a> &nbsp;&nbsp;
+    <a  class = "location" routerLink = "flowers"> סידור פרחים </a> &nbsp;&nbsp;
+    <a  class = "location" routerLink = "log-in"> כניסת משתמש </a> &nbsp;&nbsp;
+    <a  class = "location" routerLink = "worker"> הרשמת בעלי מקצוע </a> &nbsp;&nbsp;
+-->
+<span *ngFor="let item of typeOfWorker"><a class = "location" routerLink ="{{item.routerLink}}">{{item.nametype}}</a> &nbsp;&nbsp;</span>
+<a  class = "location" routerLink = "log-in"> כניסת משתמש </a> &nbsp;&nbsp;
+    <a  class = "location" routerLink = "worker"> הרשמת בעלי מקצוע </a> &nbsp;&nbsp;
+    <br><br>
+
+  <p>  {{Workers1.nameworker}}</p>
+
+   <!-- <app-log-in></app-log-in> -->
+   <router-outlet></router-outlet>
+
+  
+ 
+</div> 
+
+
+
+
+

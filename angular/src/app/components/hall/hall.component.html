@@ -1,0 +1,145 @@
+<br>
+<br>
+ <h4 class =title >   : אולמות     </h4>
+
+
+ 
+ <label class="custom-select" style="width:200px;">
+   <select>
+     <option value="0">הכי פופולרי:</option>
+     <option value="1">הכי פופולרי:</option>
+     <option value="2">הכי רלוונטי</option>
+     <option value="3">לפי האלף בית </option>
+     <option value="4">מחיר:נמוך- גבוה</option>
+     <option value="5">מחיר:גבוה -נמוך</option>
+   </select>
+ <label >    :מיין לפי    </label>
+ <br> 
+
+ <body>
+  <div class="container">
+      <div class="center" style="border:groove">
+              <br>
+              <div class=location2>
+                <h4>:מספר מוזמנים</h4>
+                עד 150 איש <mat-checkbox name="150" (change)="changed($event)"></mat-checkbox> <br><br>
+                עד 300 איש <mat-checkbox name="300" (change)="changed($event)"></mat-checkbox> <br><br>
+                עד 400 איש <mat-checkbox name="400" (change)="changed($event)"></mat-checkbox><br><br>
+                עד 500 איש <mat-checkbox name="500" (change)="changed($event)"></mat-checkbox><br><br>
+                מעל 500 איש <mat-checkbox name="מעל 500 איש" (change)="changed($event)"></mat-checkbox><br><br>
+              </div>
+
+                <div class=location3>
+                <h4>:אזורים</h4>
+                כל האזורים <mat-checkbox  name="כל האזורים" (change)="changed($event)"></mat-checkbox> <br><br>
+                אזור ירושלים <mat-checkbox name="אזור ירושלים" (change)="changed($event)"></mat-checkbox> <br><br>
+                הנגב <mat-checkbox name="הנגב" (change)="changed($event)"></mat-checkbox><br><br>
+                מרכז  <mat-checkbox name="מרכז" (change)="changed($event)"></mat-checkbox><br><br>
+                צפון <mat-checkbox name="הצפון" (change)="changed($event)"></mat-checkbox><br><br>
+              </div>
+
+              <div class=location1>
+                <h4>:מאפינים נוספים</h4>
+                 אולם + גן אירועים <mat-checkbox name="אולם +גן אירועים" (change)="changed($event)"></mat-checkbox> <br><br>
+                 כולל קיטרינג <mat-checkbox  name="כולל קיטרינג" (change)="changed($event)"></mat-checkbox> <br><br>
+                 שירותי חניה <mat-checkbox name="שירותי חניה" (change)="changed($event)"></mat-checkbox><br><br>
+              </div> 
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+      </div>
+  </div>
+</body>
+
+
+
+<!-- <input type="checkbox" [checked]="checkbox" (change)="changed($event)"/> -->
+<!-- 
+<table>
+  <tr > <td>כותרת <td><tr></tr>
+  <tr  *ngFor="let todo of Workers">
+      <td>{{todo.nameworker}}</td> <td>{{todo.Selfphone}}</td><td>{{todo.Description}}</td><td>{{todo.price}}</td><td>{{todo.image}}</td><td>{{todo.category}}</td><td>{{todo.aria}}</td><td>{{todo.genre}}</td>
+ </tr>
+</table> -->
+
+<!-- category = tmp1.Value,//קטגוריה 
+aria = tmp1.Value,//אזור
+genre -->
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <ul  >
+                <ul  >
+                  <li *ngFor="let todo of Workers1"   >
+                  <input type="image" value="{{todo.image}}"   >
+                  <input type="text" value="{{todo.nameworker}}"  >
+                  <input type="text" value="{{todo.selfphone}}"   >
+                  <input type="text" value="{{todo.description}}" >
+                  <input type="text" value="{{todo.category}}"    >
+                  <input type="text" *ngFor="let v of todo.extraValues" value="{{v.value}}"/>
+                  <input type="button" (click)="moreinff(todo)" value="למידע נוסף">
+                  </li>
+                </ul>
+                
+
+
+
+ <!-- <div class="center">
+    <div class="container">
+         <label >: סוג אולם </label>
+            לסדר את הרדיו בוטון
+            <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+            </mat-radio-group>
+             -->
+           <!-- <br>
+           <br>
+           <br>
+           <br>
+           <label >מחיר</label>
+
+   </div>
+</div> --> 
+
+<!-- 
+<h4 class =title >  !!!ברכות על הצטרפותך    </h4> -->
+ <!-- <body>
+  <div class="container">
+      <div class="center" style="border:groove">
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+       
+        </div> 
+    </div>
+</body>      -->
+
+  <!-- אולם  <mat-checkbox></mat-checkbox> <br><br>
+  צלם <mat-checkbox></mat-checkbox> <br><br>
+  זמר <mat-checkbox></mat-checkbox><br><br>
+  סידור פרחים   <mat-checkbox></mat-checkbox><br><br>
+  רב מחתן <mat-checkbox></mat-checkbox><br><br> --> 
+ <!-- </div> 
+  </div>
+</body> -->
+
+
