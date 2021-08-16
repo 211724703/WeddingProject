@@ -10,13 +10,13 @@ namespace WeddingProject.Controllers
 {
     [Route("api/[controller]")]
     public class WorkertoweddingController : ControllerBase
-    //שימי לב שזה חייב להסתימם במילה קונטרולר
+    
     {
         IWorkertoweddingServise iWorkertowS;
-        public WorkertoweddingController(IWorkertoweddingServise iWorkertowS) //זה הזרקה לסרויס
+        public WorkertoweddingController(IWorkertoweddingServise iWorkertowS) 
         {
             this.iWorkertowS = iWorkertowS;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסיםץ אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
