@@ -15,7 +15,7 @@ namespace WeddingProject.Controllers
     
     {
         ITasksbyratingService iTaskS;
-        public TasksbyratingController(ITasksbyratingService iTaskS) //זה הזרקה לסרויס
+        public TasksbyratingController(ITasksbyratingService iTaskS) 
         {
             this.iTaskS = iTaskS;
             
