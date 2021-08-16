@@ -13,10 +13,10 @@ namespace WeddingProject.Controllers
     {
 
         IValuestosadeofworkerService IValues;
-        public ValuestosadeofworkerController(IValuestosadeofworkerService IValues) //זה הזרקה לסרויס
+        public ValuestosadeofworkerController(IValuestosadeofworkerService IValues) 
         {
             this.IValues = IValues;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסיםץ אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
