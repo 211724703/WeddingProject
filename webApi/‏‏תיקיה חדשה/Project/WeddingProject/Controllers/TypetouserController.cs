@@ -16,10 +16,10 @@ namespace WeddingProject.Controllers
 
         ITypetouserService iTypetoS;
         
-        public TypetouserController(ITypetouserService iTypetoS) //זה הזרקה לסרויס
+        public TypetouserController(ITypetouserService iTypetoS) 
         {
             this.iTypetoS = iTypetoS;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסיםץ אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
@@ -31,10 +31,7 @@ namespace WeddingProject.Controllers
         }
 
 
-        //פונקציה המקבלת אוביקט מסוג  לקוח ומחזירה רשימה המכילה לכל סוג שירות כמה אחוזים יש
-
-
-
+        
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
