@@ -28,7 +28,7 @@ namespace WeddingProject.Controllers
         //}
 
         //GET api/<controller>/5
-        [HttpGet("GetAllFeedback/{id}")]//פונקציה שמחזירה רשימת פידבקים לבעל מקצוע מסוים
+        [HttpGet("GetAllFeedback/{id}")]
         public List<CFeedback> Get(int id)
         {
             return iFeedbackS.GetAllFeedback().Where(x => x.Workerid == id).ToList();
