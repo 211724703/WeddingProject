@@ -16,15 +16,15 @@ namespace WeddingProject.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
-    //שימי לב שזה חייב להסתימם במילה קונטרולר
+   
     {
         ICustomersService iCustS;
         ITypetouserService iUserS;
-        public CustomersController(ICustomersService iCustS, ITypetouserService iUserS) //זה הזרקה לסרויס
+        public CustomersController(ICustomersService iCustS, ITypetouserService iUserS) 
         {
             this.iCustS = iCustS;
             this.iUserS = iUserS;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסים אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
@@ -36,7 +36,7 @@ namespace WeddingProject.Controllers
         }
 
 
-        //זימון הפונקציה שליפת משתמש ע"יי הכנסת שם משתמש וסיסמא
+        
         // GET api/<controller>/5
 
         [HttpGet("Getcustomer/{id}/{name}")]
