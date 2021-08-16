@@ -1,4 +1,0 @@
-C:\ahuvi\פרויקט חתונה אהובי ואילה\Project\Project\obj\Debug\netcoreapp2.0\Project.csprojAssemblyReference.cache
-C:\ahuvi\פרויקט חתונה אהובי ואילה\Project\Project\obj\Debug\netcoreapp2.0\Project.csproj.CoreCompileInputs.cache
-C:\ahuvi\פרויקט חתונה אהובי ואילה\Project\Project\obj\Debug\netcoreapp2.0\Project.AssemblyInfoInputs.cache
-C:\ahuvi\פרויקט חתונה אהובי ואילה\Project\Project\obj\Debug\netcoreapp2.0\Project.AssemblyInfo.cs
