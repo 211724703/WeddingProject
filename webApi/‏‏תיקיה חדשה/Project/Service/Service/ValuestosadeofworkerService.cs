@@ -12,25 +12,25 @@ namespace Service
     {
         IValuestosadeofworkerRepository iValuesR;
 
-        public ValuestosadeofworkerService(IValuestosadeofworkerRepository iValuesR)//גישה לרפוזיטורי
+        public ValuestosadeofworkerService(IValuestosadeofworkerRepository iValuesR)
         {
             this.iValuesR = iValuesR;
         }
         public void AddValuestosadeofworker(CValuestosadeofworker valuesto)
         {
-            //CBlocks cBlocks = new CBlocks() { IdBlock=block.IdBlock,NameBlocks=block.NameBlocks};
+    
             Valuestosadeofworker valuestosadeofworker = new Valuestosadeofworker()
             {
 
-                Valuestosadeofworkerid = valuesto.Valuestosadeofworkerid,//סיסמה
-                Workerid = valuesto.Workerid,//שם משתמש
+                Valuestosadeofworkerid = valuesto.Valuestosadeofworkerid,
+                Workerid = valuesto.Workerid,
                 Sadeid = valuesto.Sadeid,
                 Value = valuesto.Value,
 
             };
 
-            iValuesR.AddValuestosadeofworker(valuestosadeofworker);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
+            iValuesR.AddValuestosadeofworker(valuestosadeofworker);
+        }                            
 
 
         public void DeleteValuestosadeofworker(CValuestosadeofworker valuesto)
@@ -97,7 +97,7 @@ namespace Service
 
             return valuestosadeofworker;
         }
-        //מחזיר רשימת ערכים עפ"י קוד שדה
+        
         public List<CValuestosadeofworker> GetValuestosadeofworkers(int Id)
         {
             List<CValuestosadeofworker> result = GetAllValuestosadeofworker().Where(a => a.Sadeid == Id).ToList();
@@ -107,13 +107,13 @@ namespace Service
         
 
 
-        //לכל קוד שדה מחזיר את רשימת הערכים
-        public List<CValuestosadeofworker> GetValuestosadeofworkersssss(List<Sadottypeofworker> ListSadeid)//מקבל רשימה של קוד שדה 
+        
+        public List<CValuestosadeofworker> GetValuestosadeofworkersssss(List<Sadottypeofworker> ListSadeid)
         {
             {
-                List<Valuestosadeofworker> valuestosadeofworker = iValuesR.GetAllValuestosadeofworker();//גישה לרפוזיטורי
+                List<Valuestosadeofworker> valuestosadeofworker = iValuesR.GetAllValuestosadeofworker();
                 List<CValuestosadeofworker> cvaluestosadeofworker = new List<CValuestosadeofworker>();
-                foreach (var Sadeid in ListSadeid)  //השתמשנו בפור הנ"ל כי אין לנו גודל מוגדר של רשימה 
+                foreach (var Sadeid in ListSadeid)  
                 {
                   //  cvaluestosadeofworker.Add(new CValuestosadeofworker { Valuestosadeofworkerid = Sadeid.Valuestosadeofworkerid, Company = Sadeid.Company, From = Sadeid.From, To = Sadeid.To });
                 }
@@ -123,29 +123,6 @@ namespace Service
 
 
 
-        //public List<CFlight> GetCFlightsByCompany(int compId) //פונקציה שמחזירה את רשימת הטיסות של חברה מסוימת
-        //{
-        //    List<Flight> flights = flightRepository.GetFlightsByCompany(compId);//קישור לרפוזיטורי
-        //    List<CFlight> cFlights = new List<CFlight>();//מקושר לקמממן
-        //    foreach (var item in flights)
-        //    {
-        //        cFlights.Add(new CFlight { Id = item.Id, Company = item.Company, From = item.From, To = item.To });
-        //    }
-
-        //    return cFlights;
-        //}
-        //public List<CAppsAndWebsites> GetExpInBlock(int id)
-        //{
-        //    CAppsAndWebsites tmp;
-        //    List<CAppsAndWebsites> appsAndWebsitesL = new List<CAppsAndWebsites>();
-        //    List<CExceptionalAppsInBlocks> cExceptionalAppsInBlocksL = iExcAppInBlooks.GetAllExceptionalAppsInBlocks().Where(a => a.IdBlocks == id).ToList();
-        //    foreach (CExceptionalAppsInBlocks item in cExceptionalAppsInBlocksL)
-        //    {
-        //        tmp = GetAppsAndWebsitesById(item.IdAppsAndWebsites);
-        //        appsAndWebsitesL.Add(tmp);
-        //    }
-        //    return appsAndWebsitesL;
-        //}
-
+     
     }
 }
