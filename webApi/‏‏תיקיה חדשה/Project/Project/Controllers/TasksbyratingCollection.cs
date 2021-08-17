@@ -10,15 +10,15 @@ using System.Threading.Tasks;
 namespace WeddingProject.Controllers
 {
 
-    [Route("api/[controller]")]////////////////////////////
+    [Route("api/[controller]")]
     public class TasksbyratingController : ControllerBase
-    //שימי לב שזה חייב להסתימם במילה קונטרולר
+    
     {
         ITasksbyratingService iTaskS;
-        public TasksbyratingController(ITasksbyratingService iTaskS) //זה הזרקה לסרויס
+        public TasksbyratingController(ITasksbyratingService iTaskS) 
         {
             this.iTaskS = iTaskS;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסים אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
