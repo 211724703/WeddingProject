@@ -9,7 +9,7 @@ namespace Repository
     class WorkersregistrationRepository: IWorkersregistrationRepository
     {
         DB context;
-        public WorkersregistrationRepository(DB context)//ההזרקה של לדטה בייס
+        public WorkersregistrationRepository(DB context)
         {
             this.context = context;
         }
