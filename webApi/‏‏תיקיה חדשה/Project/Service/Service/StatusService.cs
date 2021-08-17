@@ -12,13 +12,13 @@ namespace Service
     {
         IStatusRepository iStatusR;
 
-        public StatusService(IStatusRepository iStatusR)//גישה לרפוזיטורי
+        public StatusService(IStatusRepository iStatusR)
         {
             this.iStatusR = iStatusR;
         }
         public void AddStatus(CStatus Stat)
         {
-            //CBlocks cBlocks = new CBlocks() { IdBlock=block.IdBlock,NameBlocks=block.NameBlocks};
+        
             Status status = new Status()
             {
 
@@ -26,8 +26,8 @@ namespace Service
                 Statusname = Stat.Statusname,
             };
 
-            iStatusR.AddStatus(status);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
+            iStatusR.AddStatus(status);
+        }                           
 
 
         public void DeleteStatus(CStatus Stat)
@@ -68,7 +68,7 @@ namespace Service
 
 
 
-        public List<CStatus> GetAllStatus()//מחזיר רשימה 
+        public List<CStatus> GetAllStatus()
         {
 
             List<CStatus> Status = (from tmp in iStatusR.GetAllStatus()
