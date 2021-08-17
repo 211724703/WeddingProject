@@ -9,7 +9,7 @@ namespace Repository
     class TasksbyratingRepository:ITasksbyratingRepository
     {
         DB context;
-        public TasksbyratingRepository(DB context)//ההזרקה של לדטה בייס
+        public TasksbyratingRepository(DB context)
         {
             this.context = context;
         }
