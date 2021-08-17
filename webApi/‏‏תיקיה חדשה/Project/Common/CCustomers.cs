@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace Common
-//את צריכה לשנות את הname space לכל המחלקות של הקומון
+
 {
     public class CCustomers
     {
