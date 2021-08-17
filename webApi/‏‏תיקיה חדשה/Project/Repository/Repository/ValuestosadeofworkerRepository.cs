@@ -9,7 +9,7 @@ namespace Repository
     class ValuestosadeofworkerRepository : IValuestosadeofworkerRepository
     {
         DB context;
-        public ValuestosadeofworkerRepository(DB context)//ההזרקה של לדטה בייס
+        public ValuestosadeofworkerRepository(DB context)
         {
             this.context = context;
         }
