@@ -12,8 +12,8 @@ namespace Service
     {
         ISadottypeofworkerRepository iSadottypR;
 
-        public SadottypeofworkerService(ISadottypeofworkerRepository iSadottypR)//גישה לרפוזיטורי
-        {
+        public SadottypeofworkerService(ISadottypeofworkerRepository iSadottypR)
+        
             this.iSadottypR = iSadottypR;
         }
         public void AddSadottypeofworker(CSadottypeofworker Sadot)
@@ -28,8 +28,8 @@ namespace Service
                 Sadetypeid = Sadot.Sadetypeid,
             };
 
-            iSadottypR.AddSadottypeofworker(sadottypeofworker);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
+            iSadottypR.AddSadottypeofworker(sadottypeofworker);
+        }
 
 
         public void DeleteSadottypeofworker(CSadottypeofworker Sadot)
@@ -72,7 +72,7 @@ namespace Service
 
 
 
-        public List<CSadottypeofworker> GetAllSadottypeofworker()//מחזיר רשימה 
+        public List<CSadottypeofworker> GetAllSadottypeofworker()
         {
 
             List<CSadottypeofworker> sadottypeofworker = (from tmp in iSadottypR.GetAllSadottypeofworker()
@@ -87,8 +87,8 @@ namespace Service
 
             return sadottypeofworker;
         }
-        ////שליפת השדות עפ"י בעל מקצוע מסוים
-        public List<CSadottypeofworker> GetSadotType(int Id)// מסוים של סוג בעל מקצוע לדוגמא מוזיקה ומחזירה את רשימת השדות ז'נאר, אזור ,מחיר וכו'ID מקבל 
+        
+        public List<CSadottypeofworker> GetSadotType(int Id)
         {
             List<CSadottypeofworker> result = GetAllSadottypeofworker().Where(a => a.Typeid == Id).ToList();
             return result;
