@@ -11,7 +11,7 @@ export class HallService {
   urlservice='http://localhost:57438/api/';
   public work:Worker;
   private _work1:Worker;
-  constructor(private http :HttpClient) { ///מקבל את הhttp והוא מעביר את הקריאות שרת
+  constructor(private http :HttpClient) { 
   }
 
   get worker():Worker{
@@ -22,16 +22,16 @@ export class HallService {
      this._work1 = worker;
   }
 
-  getall():Observable<any> //החזרת רשימה שלטבלה   ם
+  getall():Observable<any> 
   {
    debugger;
-   return  this.http.get(this.urlservice+ "Workers") ;//הכנסת הנתיב מווב לטבלת בעלי המצוע
+   return  this.http.get(this.urlservice+ "Workers") ;
     // this.srv.get<NewBB[]>(this.url+"NewBBS/GetAllBB")
    
   }
 
-  //החזרת פרטי בעל מיקצוע + מחיר
-    getOne(id:number):Observable<any[]>//החזרת שורה בטבלה 
+  
+    getOne(id:number):Observable<any[]> 
    {
     debugger;
       return  this.http.get<any[]>(this.urlservice+"Workers/GetDetailsWorkerByType/"+id);
