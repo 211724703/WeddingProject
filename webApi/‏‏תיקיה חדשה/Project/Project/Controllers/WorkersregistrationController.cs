@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 namespace WeddingProject.Controllers
 {
 
-    [Route("api/[controller]")]////////////////////////////////////
+    [Route("api/[controller]")]
     public class WorkersregistrationController : ControllerBase
-    //שימי לב שזה חייב להסתימם במילה קונטרולר
+    
     {
         IWorkersregistrationServise iWorkersrS;
-        public WorkersregistrationController(IWorkersregistrationServise iWorkersrS) //זה הזרקה לסרויס
+        public WorkersregistrationController(IWorkersregistrationServise iWorkersrS) 
         {
             this.iWorkersrS = iWorkersrS;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסיםץ אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
