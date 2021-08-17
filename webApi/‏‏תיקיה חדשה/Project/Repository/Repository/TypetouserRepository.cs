@@ -9,7 +9,7 @@ namespace Repository
     class TypetouserRepository:ITypetouserRepository
     {
         DB context;
-        public TypetouserRepository(DB context)//ההזרקה של לדטה בייס
+        public TypetouserRepository(DB context)
         {
             this.context = context;
         }
