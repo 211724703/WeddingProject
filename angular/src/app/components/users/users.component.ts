@@ -10,12 +10,8 @@ import { workers } from '../../Classes/worker';
 })
 export class UsersComponent implements OnInit {
   
-  // user:any={};
-  // paaswordc:string
+ 
   constructor( ) {
-   //constructor(private serv:CustomerService ,router:Router) {
-  //  this.user={};
-  //  this.user={"userId":'',"username":"","namchatan":" ","nameCala":" ","dateWedding":" ","taktziv":" ","mailChatan":" ","mailCala":" ","misinvited":" "};
   
   }
 
@@ -23,11 +19,3 @@ export class UsersComponent implements OnInit {
   }
 
 
-  // precentt(){
-  //   this.router.navigateByUrl("precent")
-// }
-}
-
-
-// <precent [all]="user.userid"></precent>
-// this.Serv.שם המשתנה 
