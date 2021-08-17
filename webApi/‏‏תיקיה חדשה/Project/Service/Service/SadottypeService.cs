@@ -12,7 +12,7 @@ namespace Service
     {
         ISadottypeRepository iSadotR;
 
-        public SadottypeService(ISadottypeRepository iSadotR)//גישה לרפוזיטורי
+        public SadottypeService(ISadottypeRepository iSadotR)
         {
             this.iSadotR = iSadotR;
         }
@@ -22,16 +22,15 @@ namespace Service
             Sadottype sadottype = new Sadottype()
             {
 
-                Sadetypeid = Sad.Sadetypeid,//סיסמה
-                Sadetypeteur = Sad.Sadetypeteur,//שם משתמש
+                Sadetypeid = Sad.Sadetypeid,
+                Sadetypeteur = Sad.Sadetypeteur,
 
             };
 
-            iSadotR.AddSadottype(sadottype);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
+            iSadotR.AddSadottype(sadottype);
+        }                            
 
-
-        public void DeleteSadottype(CSadottype Sad)  //מחיקת לקוח
+        public void DeleteSadottype(CSadottype Sad)  
         {
             CSadottype Ssadottype = new CSadottype()
             {
@@ -68,7 +67,7 @@ namespace Service
 
 
 
-        public List<CSadottype> GetAllSadottype()//מחזיר רשימה 
+        public List<CSadottype> GetAllSadottype() 
         {
 
             List<CSadottype> sadottype = (from tmp in iSadotR.GetAllSadottype()
