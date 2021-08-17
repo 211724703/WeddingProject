@@ -19,29 +19,29 @@ export class RabbiComponent implements OnInit {
 
   [x: string]: any;
   
-  Workers:any[]=[];//הגדרת מערך
+  Workers:any[]=[];
   Workers1:any[]=[];
-  id:number;//הגדרת int רגיל
-  worker:any= {};//מופע בודד
+  id:number;
+  worker:any= {};
   form;
   category:string;
   zaner:string;
   aria:string;
   public work:workers;
-  constructor(private router:Router ,private serve:RabbiService) { //מזמנים את הסרוויס)
+  constructor(private router:Router ,private serve:RabbiService) { 
   }
  
   // this.user={"userId":''}
   
   ngOnInit() {
 
-    // זימון הפונקציה המחזירה את רשימת בעלי המקצוע
+    
  this.serve.getOne(5).subscribe(data =>{
   debugger;
   console.log('רשימה של רבנים',data)
-  this.Workers=data;debugger; //החזרה בצורת רשימה 
+  this.Workers=data;debugger; /
   console.log(this.Workers);
-  this.Workers1=this.Workers;debugger;  //החזרה בצורת טבלה 
+  this.Workers1=this.Workers;debugger;   
  });
 }
 
@@ -49,11 +49,11 @@ changed(evt) {
 debugger;
 if(evt.checked)
 {debugger;
-this.category=evt.source.name; //מה שנלחץ נכנס לשדה הקטגוריה
+this.category=evt.source.name;
 if(this.category=='כל האזורים')
    return this.Workers1=this.Workers;
 else{
-  this.Workers1=this.Workers.filter(item=>{debugger;return item.category==this.category}  );//בדיקה שהאלמט שנבחר  זהה לשדה קטגוריה שיש לזמר
+  this.Workers1=this.Workers.filter(item=>{debugger;return item.category==this.category}  );
 }
 }
 else {
@@ -62,7 +62,7 @@ else {
 }   
 
 
-// פתיחת קומפוננטה של מידע נוסף 
+
 moreinff(todo){
  this.serve.worker= todo; 
  this.router.navigate(["moreinf", todo.workerid]); debugger;
