@@ -9,7 +9,7 @@ namespace Repository
     public class FeedbackRepository:IFeedbackRepository
     {
         DB context;
-        public FeedbackRepository(DB context)//ההזרקה של לדטה בייס
+        public FeedbackRepository(DB context)
         {
             this.context = context;
         }
