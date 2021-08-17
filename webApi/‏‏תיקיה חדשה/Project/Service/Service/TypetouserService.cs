@@ -14,14 +14,14 @@ namespace Service
         ITypetouserRepository iTypetR;
         ITypeofworkerRepository iTypeotR;
 
-        public TypetouserService(ITypetouserRepository iTypetR, ITypeofworkerRepository iTypeotR)//גישה לרפוזיטורי
+        public TypetouserService(ITypetouserRepository iTypetR, ITypeofworkerRepository iTypeotR)
         {
             this.iTypetR = iTypetR;
             this.iTypeotR = iTypeotR;
         }
         public void AddTypetouser(CTypetouser Typetou)
         {
-            //CBlocks cBlocks = new CBlocks() { IdBlock=block.IdBlock,NameBlocks=block.NameBlocks};
+           
             Typetouser typetouser = new Typetouser()
             {
                 Typetouserid = Typetou.Typetouserid,
@@ -30,9 +30,8 @@ namespace Service
                 Precent = Typetou.Precent,
             };
 
-            iTypetR.AddTypetouser(typetouser);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
-
+            iTypetR.AddTypetouser(typetouser);
+        }
 
         public void DeleteTypetouser(CTypetouser Typetou)
         {
@@ -68,7 +67,7 @@ namespace Service
 
 
 
-        public List<CTypetouser> GetAllTypetouser()//מחזיר רשימה 
+        public List<CTypetouser> GetAllTypetouser()
         {
 
             List<CTypetouser> typetouser = (from tmp in iTypetR.GetAllTypetouser()
@@ -83,12 +82,12 @@ namespace Service
 
             return typetouser;
         }
-        public void Avg()//חישוב האחוזים לכל סוג שירות 
+        public void Avg() 
         {
-            var result = iTypetR.GetAllTypetouser() //הצגת השירותים השונים  בקבוצות עפ"י typeid
+            var result = iTypetR.GetAllTypetouser() 
             .GroupBy(b => b.Typeid)
             .ToDictionary(
-            g => g.Key.ToString(),// הצגה לפי הkey 
+            g => g.Key.ToString(),
             g => new
             {
                 s = g.Select(b => b.Precent)
@@ -103,7 +102,7 @@ namespace Service
             }
         }
 
-        public List<CTypetouser> Precents(string id)//רשימה של סוגים ללקוח מסוים לפי id
+        public List<CTypetouser> Precents(string id)
         {
             var result = iTypetR.GetAllTypetouser().Where(a => a.Userid == id).Select(tmp => new CTypetouser
             {
