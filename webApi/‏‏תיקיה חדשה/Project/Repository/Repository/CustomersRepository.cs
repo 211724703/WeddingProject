@@ -10,7 +10,7 @@ namespace Repository
    public class CustomersRepository: ICustomersRepository
     {
         DB context;
-        public CustomersRepository(DB context)//ההזרקה של לדטה בייס
+        public CustomersRepository(DB context)
         {
             this.context = context;
         }
