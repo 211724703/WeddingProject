@@ -9,7 +9,7 @@ namespace Repository
     class SadottypeofworkerRepository:ISadottypeofworkerRepository
     {
         DB context;
-        public SadottypeofworkerRepository(DB context)//ההזרקה של לדטה בייס
+        public SadottypeofworkerRepository(DB context)
         {
             this.context = context;
         }
