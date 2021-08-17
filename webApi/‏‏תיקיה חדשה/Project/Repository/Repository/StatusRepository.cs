@@ -9,7 +9,7 @@ namespace Repository
     class StatusRepository: IStatusRepository
     {
         DB context;
-        public StatusRepository(DB context)//ההזרקה של לדטה בייס
+        public StatusRepository(DB context)
         {
             this.context = context;
         }
