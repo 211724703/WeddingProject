@@ -11,7 +11,7 @@ export class WorkersregistService {
   public work:Worker;
   private _work1:Worker;
 
-  constructor(private http :HttpClient) { ///מקבל את הhttp והוא מעביר את הקריאות שרת
+  constructor(private http :HttpClient) { 
   }
 
 
@@ -23,16 +23,16 @@ export class WorkersregistService {
      this._work1 = worker;
   }
   
-// // ינפורמציה החזרת פרטי בעל מיקצוע + מחיר
-// getOnee(id1:number,id2:number):Observable<any[]>//החזרת שורה בטבלה 
+
+// getOnee(id1:number,id2:number):Observable<any[]>
 // {
 //  debugger;
 //    return  this.http.get<any[]>(this.urlservice+"Workers/GetinformWorker/"+id1+"/"+id2);
    
 // }
 
- //הוספת לקוח חדש
- submit(BB: any)// פרטים ומכניס לדטה בייס מקבל 
+ 
+ submit(BB: any)
  {
    // const httpOptions = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
    debugger;
@@ -40,7 +40,7 @@ export class WorkersregistService {
 
  }
 
-  //שליפת בעל מיקצוע לפי שם
+  
   findByName(name:string): Observable<any> 
   {
     debugger;
