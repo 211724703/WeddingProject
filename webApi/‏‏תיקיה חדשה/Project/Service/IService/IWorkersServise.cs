@@ -12,12 +12,12 @@ namespace Service
         void DeleteWorkers(CWorkers Work);
         void UpdateWorkers(CWorkers Work);
         List<CWorkers> GetAllWorkers();
-        List<CWorkers> Getworker(int Id);////שליפת בעל מקצוע לפי סוג
-        //List<CWorkers> Getworkes(List<Valuestosadeofworker> Listvalues);//מקבל רשימה של ערכים
+        List<CWorkers> Getworker(int Id);
+        //List<CWorkers> Getworkes(List<Valuestosadeofworker> Listvalues);
         void Getworkes();
-        object[] GetDetailsWorkerByType(int Id);//החזרת פרטי בעל מיקצוע + מחיר
+        object[] GetDetailsWorkerByType(int Id);
         object GetDetailsWorkerById(int Id);
-        object[] GetinformWorker(int tId, int wId);//החזרת פרטי בעל מיקצוע + מחיר למידע נוסף
-        CWorkers GetworkerByName(string name);//שליפת בעל מיקצוע עפ"י שם
+        object[] GetinformWorker(int tId, int wId);
+        CWorkers GetworkerByName(string name);
     }
 }
