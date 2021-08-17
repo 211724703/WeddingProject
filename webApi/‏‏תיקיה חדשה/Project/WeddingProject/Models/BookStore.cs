@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WeddingProject.Models
 {
-    public partial class BookStore : DbContext
+    public partial class DBStore : DbContext
     {
-        public BookStore()
+        public DBStore()
         {
         }
 
-        public BookStore(DbContextOptions<BookStore> options)
+        public BookStore(DbContextOptions<DBStore> options)
             : base(options)
         {
         }
