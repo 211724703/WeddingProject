@@ -12,18 +12,18 @@ namespace Service
     {
         ITypeofworkerRepository iTypeofR;
 
-        public TypeofworkerService(ITypeofworkerRepository iTypeofR)//גישה לרפוזיטורי
+        public TypeofworkerService(ITypeofworkerRepository iTypeofR)
         {
             this.iTypeofR = iTypeofR;
         }
         public void AddTypeofworker(CTypeofworker Typeo)
         {
-            //CBlocks cBlocks = new CBlocks() { IdBlock=block.IdBlock,NameBlocks=block.NameBlocks};
+      
             Typeofworker typeofworker = new Typeofworker()
             {
 
-                Typeid = Typeo.Typeid,//סיסמה
-                Nametype = Typeo.Nametype,//שם משתמש
+                Typeid = Typeo.Typeid
+                Nametype = Typeo.Nametype,
                 Precent = Typeo.Precent,
                 Misusetotipe = Typeo.Misusetotipe,
                 RouterLink = Typeo.RouterLink
@@ -31,16 +31,15 @@ namespace Service
 
             };
 
-            iTypeofR.AddTypeofworker(typeofworker);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
-
+            iTypeofR.AddTypeofworker(typeofworker);
+        }                            
 
         public void DeleteTypeofworker(CTypeofworker Typeo)
         {
             CTypeofworker ctypeofworker = new CTypeofworker()
             {
-                Typeid = Typeo.Typeid,//סיסמה
-                Nametype = Typeo.Nametype,//שם משתמש
+                Typeid = Typeo.Typeid,
+                Nametype = Typeo.Nametype,
                 Precent = Typeo.Precent,
                 Misusetotipe = Typeo.Misusetotipe,
                 RouterLink = Typeo.RouterLink
@@ -49,8 +48,8 @@ namespace Service
             };
             Typeofworker typeofworker = new Typeofworker()
             {
-                Typeid = Typeo.Typeid,//סיסמה
-                Nametype = Typeo.Nametype,//שם משתמש
+                Typeid = Typeo.Typeid,
+                Nametype = Typeo.Nametype,
                 Precent = Typeo.Precent,
                 Misusetotipe = Typeo.Misusetotipe,
                 RouterLink = Typeo.RouterLink
@@ -62,8 +61,8 @@ namespace Service
         {
             CTypeofworker ctypeofworker = new CTypeofworker()
             {
-                Typeid = Typeo.Typeid,//סיסמה
-                Nametype = Typeo.Nametype,//שם משתמש
+                Typeid = Typeo.Typeid,
+                Nametype = Typeo.Nametype,
                 Precent = Typeo.Precent,
                 Misusetotipe = Typeo.Misusetotipe,
                 RouterLink = Typeo.RouterLink
@@ -82,7 +81,7 @@ namespace Service
 
 
 
-        public List<CTypeofworker> GetAllTypeofworker()//מחזיר רשימה 
+        public List<CTypeofworker> GetAllTypeofworker()/ 
         {
 
             List<CTypeofworker> typeofworker = (from tmp in iTypeofR.GetAllTypeofworker()
