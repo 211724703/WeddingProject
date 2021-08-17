@@ -12,14 +12,14 @@ namespace Service
     {
         IWorkertoweddingRepository iWorker;
 
-        public WorkertoweddingServise(IWorkertoweddingRepository iWorker)//גישה לרפוזיטורי
+        public WorkertoweddingServise(IWorkertoweddingRepository iWorker)
         {
             this.iWorker = iWorker;
         }
 
         public void AddWorkertowedding(CWorkertowedding Workert)
         {
-            Workertowedding workertowedding = new Workertowedding()///זה טבלת קישור לברר
+            Workertowedding workertowedding = new Workertowedding()
             {
                 Workertoweddingid = Workert.Workertoweddingid,
                 Workerid = Workert.Workerid,
@@ -30,16 +30,16 @@ namespace Service
 
         }
 
-        public void DeleteWorkertowedding(CWorkertowedding Workert)//
+        public void DeleteWorkertowedding(CWorkertowedding Workert)
         {
-            CWorkertowedding cworkertowedding = new CWorkertowedding()///זה טבלת קישור לברר
+            CWorkertowedding cworkertowedding = new CWorkertowedding()
             {
                 Workertoweddingid = Workert.Workertoweddingid,
                 Workerid = Workert.Workerid,
                 Userid = Workert.Userid,  
                 Statusid = Workert.Statusid,
             };
-        Workertowedding workertowedding = new Workertowedding()///זה טבלת קישור לברר
+        Workertowedding workertowedding = new Workertowedding()
         {
             Workertoweddingid = Workert.Workertoweddingid,
             Workerid = Workert.Workerid,
@@ -52,14 +52,14 @@ namespace Service
 
     public void UpdateWorkertowedding(CWorkertowedding Workert)
     {
-            CWorkertowedding cworkertowedding = new CWorkertowedding()///זה טבלת קישור לברר
+            CWorkertowedding cworkertowedding = new CWorkertowedding()
             {
                 Workertoweddingid = Workert.Workertoweddingid,
                 Workerid = Workert.Workerid,
                 Userid = Workert.Userid,
                 Statusid = Workert.Statusid,
             };
-            Workertowedding workertowedding = new Workertowedding()///זה טבלת קישור לברר
+            Workertowedding workertowedding = new Workertowedding()
             {
                 Workertoweddingid = Workert.Workertoweddingid,
                 Workerid = Workert.Workerid,
@@ -71,7 +71,7 @@ namespace Service
 
 
 
-    public List<CWorkertowedding> GetAllWorkertowedding()//מחזיר רשימה 
+    public List<CWorkertowedding> GetAllWorkertowedding()
     {
 
         List<CWorkertowedding> Workertowedding = (from tmp in iWorker.GetAllWorkertowedding()
