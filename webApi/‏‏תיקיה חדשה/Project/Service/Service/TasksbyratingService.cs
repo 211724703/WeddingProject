@@ -12,13 +12,13 @@ namespace Service
     {
         ITasksbyratingRepository iTasksbyR;
 
-        public TasksbyratingService(ITasksbyratingRepository iTasksbyR)//גישה לרפוזיטורי
+        public TasksbyratingService(ITasksbyratingRepository iTasksbyR)
         {
             this.iTasksbyR = iTasksbyR;
         }
         public void AddTasksbyrating(CTasksbyrating Tasksb)
         {
-            //CBlocks cBlocks = new CBlocks() { IdBlock=block.IdBlock,NameBlocks=block.NameBlocks};
+            
             Tasksbyrating tasksbyrating = new Tasksbyrating()
             {
 
@@ -27,9 +27,8 @@ namespace Service
                 Ratingfeedback = Tasksb.Ratingfeedback,
             };
 
-            iTasksbyR.AddTasksbyrating(tasksbyrating);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
-
+            iTasksbyR.AddTasksbyrating(tasksbyrating);
+        }                            
 
         public void DeleteTasksbyrating(CTasksbyrating Tasksb)
         {
@@ -72,7 +71,7 @@ namespace Service
 
 
 
-        public List<CTasksbyrating> GetAllTasksbyrating()//מחזיר רשימה 
+        public List<CTasksbyrating> GetAllTasksbyrating()
         {
 
             List<CTasksbyrating> tasksbyrating = (from tmp in iTasksbyR.GetAllTasksbyrating()
