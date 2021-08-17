@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using Service;
 using Common;
 
-namespace WeddingProject.Controllers //////////////////////////
+namespace WeddingProject.Controllers 
 {
 
     [Route("api/[controller]")]
     public class SadottypeofworkerCollection : ControllerBase
     {
         ISadottypeofworkerService iSadottypeoS;
-        public SadottypeofworkerCollection(ISadottypeofworkerService iSadottypeoS) //זה הזרקה לסרויס
+        public SadottypeofworkerCollection(ISadottypeofworkerService iSadottypeoS)
         {
             this.iSadottypeoS = iSadottypeoS;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסיםץ אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
