@@ -36,18 +36,18 @@ export class PersonalComponent implements OnInit {
     //this.cust1=this.serc.cust
 
   }
-  //לשלב הבא
+  
   precentt() {
-    this.serc.UserDetailes = this.user//את פרטי הוזר שהוכנסUserDetailes הכנסתי לתוך ה
+    this.serc.UserDetailes = this.user
     this.router.navigateByUrl("precent")
   }
-  //זימון הפונקציה עידכון 
+  
   updatecustomer() {
 
     this.serc.PutUpdateCustomer(this.user).subscribe();
   }
 
-  //מחיקת לקוח
+  
   delete() {
     this.serc.DeleteCust(this.user.userId).subscribe();
   }
