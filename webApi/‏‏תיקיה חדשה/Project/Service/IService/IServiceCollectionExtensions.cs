@@ -34,13 +34,7 @@ namespace Services
 
 
 
-
-            //ככה את כותבת לכל הסרויסים שיהיו לך
-
-            //לכל אחד יוצרים כזה סרוויס חדש או שלכוםלכתוב פה?
-            //לכל סרוויס שורה חדשה
-            //כמו שאני כתבתי פה מלא שורות
-
+ 
             //services.AddScoped<IBlockingForGroupService, BlockingForGroupService>();
             //services.AddScoped<IAppsInBlockService, AppsInBlockService>();
             //services.AddScoped<IAppsInCategoriesService, AppsInCategoriesService>();
