@@ -41,16 +41,3 @@ export class WorkerComponent implements OnInit {
   }
   
 
-  // Approval(){
-
-  //  if(this.worker.Nameworker===null ||this.worker.Mailworker===undefined ||this.worker.message===undefined)
-  //  alert(" !השלם את כל השדות")
-  // else
-  //   alert("!הפרטים נקלטו בהצלחה!"+" "+ "הפניה מחכה לאישור המערכת ");
-  // }
-} 
-
-
-
-// תהילה פאק
-// 0504146905
