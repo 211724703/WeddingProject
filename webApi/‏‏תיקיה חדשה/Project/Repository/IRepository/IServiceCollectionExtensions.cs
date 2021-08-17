@@ -30,7 +30,7 @@ namespace Repositories
             services.AddScoped<IWorkersregistrationRepository, WorkersregistrationRepository>();
             services.AddScoped<IWorkersRepository, WorkersRepository>();
             services.AddScoped<IWorkertoweddingRepository, WorkertoweddingRepository>();
-            //פה את כותבת שורה כזו לכל הרפוזיטורי
+            
 
 
 
