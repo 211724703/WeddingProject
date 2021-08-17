@@ -10,7 +10,7 @@ namespace Repository
     {
 
         DB context;
-       public SadottypeRepository(DB context)//ההזרקה של לדטה בייס
+       public SadottypeRepository(DB context)
         {
             this.context = context;
         }
