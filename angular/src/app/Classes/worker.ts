@@ -7,7 +7,5 @@ export class workers{
     Mailworker:string;
     Typeid:string;
     Image:string;
-    // price:string;
-    // aria:string;
-    // janner:string;
+   
 }
