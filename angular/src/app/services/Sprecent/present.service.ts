@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-// import{Typetouser} from '../../Classes/Typetouser';
+
 
 
 @Injectable({
@@ -15,10 +15,10 @@ export class PresentService {
 
  
   
-  //הוספת לקוח חדש
-  submit(BB:any)// פרטים ומכניס לדטה בייס מקבל 
+  
+  submit(BB:any)
   {
-    // const httpOptions = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
+ 
     debugger;
     return this.http.put(this.urlservice + "Typetouser",BB);
 
@@ -26,22 +26,7 @@ export class PresentService {
 
 
 
-  //  //החזרת רשימה של סוגי בעלי מקצוע (ברירת מחדל) 
-  //  getOne():Observable<Typeofworker[]>//החזרת שורה בטבלה 
-  //  {
-  //   debugger;
-  //     return  this.http.get<Typeofworker[]>(this.urlservice+"Typeofworker");
-      
-  //  }
-
-  //   //החזרת רשימה של סוגים  ללקוח 
-  //   getOneid():Observable<Typetouser[]>//החזרת שורה בטבלה 
-  //   {
-  //    debugger;
-  //      return  this.http.get<Typetouser[]>(this.urlservice+"Typeofworker");
-       
-  //   }
-    
+  
 
 
 }
