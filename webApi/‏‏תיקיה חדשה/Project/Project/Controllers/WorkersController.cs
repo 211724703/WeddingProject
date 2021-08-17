@@ -10,14 +10,14 @@ namespace WeddingProject.Controllers
 {
 
     [Route("api/[controller]")]
-    public class WorkersController : ControllerBase///////////
-    //שימי לב שזה חייב להסתימם במילה קונטרולר
+    public class WorkersController : ControllerBase
+    
     {
         IWorkersServise iWorkerS;
-        public WorkersController(IWorkersServise iWorkerS) //זה הזרקה לסרויס
+        public WorkersController(IWorkersServise iWorkerS) 
         {
             this.iWorkerS = iWorkerS;
-            //פה יכול  להיות לך הרבה הזרקות להרבה סרויסיםץ אל תשכחי להוסיף אותם בפעולה הבונה
+            
         }
 
         // GET: api/<controller>
@@ -28,7 +28,7 @@ namespace WeddingProject.Controllers
             return iWorkerS.GetAllWorkers();
         }
         
-        //החזרת בעלי מקצוע לפי סוג שירות מסוים
+        
         // GET api/<controller>/5
         [HttpGet("Getworker/{id}")]
         public List<CWorkers>  Get(int id)
@@ -38,7 +38,7 @@ namespace WeddingProject.Controllers
 
        
 
-        //החזרת בעלי מקצוע  עפ"י שם
+ 
 
         [HttpGet("GetworkerByName/{name}")]
         public CWorkers GetByName(string name)
@@ -46,7 +46,7 @@ namespace WeddingProject.Controllers
             return iWorkerS.GetworkerByName(name);
         }
 
-        //החזרת פירטי בעלי מקצוע +מחיר 
+        
 
         [HttpGet("GetDetailsWorker/{id}")]
         public object[] GetDetailsWorker(int id)
@@ -54,7 +54,7 @@ namespace WeddingProject.Controllers
             return iWorkerS.GetDetailsWorker(id);   
         }
 
-        // לינפורמציה החזרת פירטי בעלי מקצוע +מחיר 
+        
 
         [HttpGet("GetinformWorker/{id1}/{id2}")]
         public object[] Getinform(int tid,int wId)
