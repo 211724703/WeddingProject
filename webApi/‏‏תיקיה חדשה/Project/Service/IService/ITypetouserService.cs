@@ -13,6 +13,6 @@ namespace Service
         void UpdateTypetouser(List<CTypetouser> value);
         List<CTypetouser> GetAllTypetouser();
         List<CTypetouser> Precents(string id);
-        void Avg();//חישוב האחוזים לכל סוג שירות 
+        void Avg();
     }
 }
