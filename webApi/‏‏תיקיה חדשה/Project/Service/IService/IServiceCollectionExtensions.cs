@@ -31,29 +31,6 @@ namespace Services
             services.AddScoped<IWorkertoweddingServise, WorkertoweddingServise>();
    
 
-
-
-
- 
-            //services.AddScoped<IBlockingForGroupService, BlockingForGroupService>();
-            //services.AddScoped<IAppsInBlockService, AppsInBlockService>();
-            //services.AddScoped<IAppsInCategoriesService, AppsInCategoriesService>();
-            //services.AddScoped<IAreaCodeService, AreaCodeService>();
-            //services.AddScoped<IBlockingForGroupService, BlockingForGroupService>();
-            //services.AddScoped<IBlocksService, BlocksService>();
-            //services.AddScoped<IBrowsingEmployeeInGroupService, BrowsingEmployeeInGroupService>();
-            //services.AddScoped<ICategoriesService, CategoriesService>();
-            //services.AddScoped<IDepartmentsService, DepartmentsService>();
-            //services.AddScoped<IEmpDepartInGroupService, EmpDepartInGroupService>();
-            //services.AddScoped<IEmployeeInGroupService, EmployeeInGroupService>();
-            //services.AddScoped<IEmployeeInJobsService, EmployeeInJobsService>();
-            //services.AddScoped<IEmployeeService, EmployeeService>();
-            //services.AddScoped<IGroupsService, GroupsService>();
-            //services.AddScoped<IJobsService, JobsService>();
-            //services.AddScoped<IPermitionsService, PermitionsService>();  
-            //services.AddScoped<ITemporaryBrowsingGroupTimeService, TemporaryBrowsingGroupTimeService>();
-            //services.AddScoped<IUnallowCategoryForBlackService, UnallowCategoryForBlackService>();
-
             services.AddRepositories();
             return services;
 
