@@ -12,7 +12,7 @@ namespace Service
     {
         IFeedbackRepository ifeedr;
 
-        public FeedbackServise(IFeedbackRepository ifeedr)//גישה לרפוזיטורי
+        public FeedbackServise(IFeedbackRepository ifeedr)
         {
             this.ifeedr = ifeedr;
         }
@@ -80,7 +80,7 @@ namespace Service
 
 
 
-        public List<CFeedback> GetAllFeedback()//מחזיר רשימה 
+        public List<CFeedback> GetAllFeedback()
         {
 
             List<CFeedback> feedbacks = (from tmp in ifeedr.GetAllFeedback() 
