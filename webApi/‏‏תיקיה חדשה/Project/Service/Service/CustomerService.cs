@@ -12,7 +12,7 @@ namespace Service
     {
         ICustomersRepository iCustR;
 
-        public CustomerService(ICustomersRepository iCustR)//גישה לרפוזיטורי
+        public CustomerService(ICustomersRepository iCustR)
         {
             this.iCustR = iCustR;
         }
@@ -23,8 +23,8 @@ namespace Service
             Customers customers = new Customers()
             {
 
-                UserId = custom.UserId,//סיסמה
-                Username = custom.Username,//שם משתמש
+                UserId = custom.UserId,
+                Username = custom.Username,
                 Namchatan = custom.Namchatan,
                 NameCala = custom.NameCala,
                 DateWedding = custom.DateWedding,
@@ -37,16 +37,16 @@ namespace Service
 
             };
 
-            iCustR.AddCustomer(customers);//זהו , זה ההוספה וככה את עושה גם למחיקה והעדכון אשלח לך דוגמא מפורטת
-        }                            //עכשיו נעשה את הקונטרולר
+            iCustR.AddCustomer(customers);
+        }                     
 
 
-        public void DeleteCustomer(CCustomers custom)  //מחיקת לקוח
+        public void DeleteCustomer(CCustomers custom)  
         {
             CCustomers ccustomers = new CCustomers()
             {
-                UserId = custom.UserId,//סיסמה
-                Username = custom.Username,//שם משתמש
+                UserId = custom.UserId,
+                Username = custom.Username,
                 Namchatan = custom.Namchatan,
                 NameCala = custom.NameCala,
                 DateWedding = custom.DateWedding,
@@ -57,8 +57,8 @@ namespace Service
             };
             Customers customers = new Customers()
             {
-                UserId = custom.UserId,//סיסמה
-                Username = custom.Username,//שם משתמש
+                UserId = custom.UserId,
+                Username = custom.Username,
                 Namchatan = custom.Namchatan,
                 NameCala = custom.NameCala,
                 DateWedding = custom.DateWedding,
@@ -70,12 +70,12 @@ namespace Service
             iCustR.DeleteCustomer(customers);
         }
 
-        public void UpdateCustomer(CCustomers custom)    // עידכון לקוח
+        public void UpdateCustomer(CCustomers custom)    
         {
             CCustomers ccustomers = new CCustomers()
             {
-                UserId = custom.UserId,//סיסמה
-                Username = custom.Username,//שם משתמש
+                UserId = custom.UserId,
+                Username = custom.Username,
                 Namchatan = custom.Namchatan,
                 NameCala = custom.NameCala,
                 DateWedding = custom.DateWedding,
@@ -86,8 +86,8 @@ namespace Service
             };
             Customers customers = new Customers()
             {
-                UserId = custom.UserId,//סיסמה
-                Username = custom.Username,//שם משתמש
+                UserId = custom.UserId,
+                Username = custom.Username,
                 Namchatan = custom.Namchatan,
                 NameCala = custom.NameCala,
                 DateWedding = custom.DateWedding,
@@ -103,7 +103,7 @@ namespace Service
 
 
 
-        public List<CCustomers> GetAllCustomer()//מחזיר רשימה 
+        public List<CCustomers> GetAllCustomer() 
         {
             List<CCustomers> customers = (from tmp in iCustR.GetAllCustomer()
                                           select new CCustomers
@@ -123,7 +123,7 @@ namespace Service
             return customers;
         }
 
-        ////שליפת שם משתמש וסיסמה
+        
         public CCustomers Getcustomer(string Id, string name)
         {                //CCustomers customers = GetAllCustomer().FirstOrDefault(a => a.UserId == Id && a.Username == name);
 
@@ -140,43 +140,12 @@ namespace Service
 
      //CCustomers customers = GetAllCustomer().FirstOrDefault(a => a.UserId == Id && a.Username == name);
 
-        ////שליפת שם משתמש וסיסמה
-        //public static DbSet<Customers> getcustomer(int Id, string name)
-        //{
-        //    using (Database1Entities db = new Database1Entities())
-        //    {
-        //        var result = db.Customers;/*.First()(a => a.Username == name && a.UserId == Id)*/
-        //        return result;
-        //    }
-        //}
+     
 
+        
+     
 
-        ////שליפת שם משתמש וסיסמה
-        //public Customers Getcustomer(int Id, string name)//מכני
-        //{
-
-        //    {
-        //        CCustomers result = (from tmp in iCustR.getcustomer(a => a.Username == name && a.UserId == Id)
-        //                             select new CCustomers
-        //                             {
-        //                                 UserId = tmp.UserId,//סיסמה
-        //                                 Username = tmp.Username,//שם משתמש
-        //                                 Namchatan = tmp.Namchatan,
-        //                                 NameCala = tmp.NameCala,
-        //                                 DateWedding = tmp.DateWedding,
-        //                                 Taktziv = tmp.Taktziv,
-        //                                 MailChatan = tmp.MailChatan,
-        //                                 MailCala = tmp.MailCala,
-        //                                 Misinvited = tmp.Misinvited,
-        //                             });
-
-        //        return result;
-        //    }
-        //}
-
-
-
-        ////שליפת שם משתמש וסיסמה
+       
         //public static DbSet<Customers> getcustomer(int Id, string name)
         //{
         //    using (Database1Entities db = new Database1Entities())
@@ -192,26 +161,6 @@ namespace Service
 
 
 
-        //public List<CCompany> GetAllComp()  // פןנקציה שמחזירה את רשימת החברות שיש להם טיסות
-        //{
-        //    List<CCompany> companies = (from c in companyRepository.GetCompanies()
-        //                                select new CCompany { Id = c.Id, Description = c.Description }).ToList(); ;
-        //    return companies;
-        //}
-
-
-        //public List<CFlight> GetAllF()  //מחזיר את כל הטיסות
-        //{
-        //    List<Flight> flights = flightRepository.GetAllFlight();
-        //    List<CFlight> cFlights = new List<CFlight>();
-        //    foreach (var item in flights)
-        //    {
-        //        cFlights.Add(new CFlight { Id = item.Id, Company = item.Company, From = item.From, To = item.To });
-        //    }
-
-        //    return cFlights;
-
-        //}
     }
 }
 
