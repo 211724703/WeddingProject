@@ -36,25 +36,7 @@ namespace Repositories
 
 
 
-            //services.AddScoped<IBlockingForGroupRepository, BlockingForGroupRepository>();
-            //services.AddScoped<IAppsInBlockRepository, AppsInBlockRepository>();
-            //services.AddScoped<IAppsInCategoriesRepository, AppsInCategoriesRepository>();
-            //services.AddScoped<IAreaCodeRepository, AreaCodeRepository>();
-            //services.AddScoped<IBlockingForGroupRepository, BlockingForGroupRepository>();
-            //services.AddScoped<IBlocksRepository, BlocksRepository>();
-            //services.AddScoped<IBrowsingEmployeeInGroupRepository, BrowsingEmployeeInGroupRepository>();
-            //services.AddScoped<ICategoriesRepository, CategoriesRepository>();
-            //services.AddScoped<IDepartmentsRepository, DepartmentsRepository>();
-            //services.AddScoped<IEmpDepartInGroupRepository, EmpDepartInGroupRepository>();
-            //services.AddScoped<IEmployeeInGroupRepository, EmployeeInGroupRepository>();
-            //services.AddScoped<IEmployeeInJobsRepository, EmployeeInJobsRepository>();
-            //services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            //services.AddScoped<IGroupsRepository, GroupsRepository>();
-            //services.AddScoped<IJobsRepository, JobsRepository>();
-            //services.AddScoped<IPermitionsRepository, PermitionsRepository>();       
-            //services.AddScoped<ITemporaryBrowsingGroupTimeRepository, TemporaryBrowsingGroupTimeRepository>();
-            //services.AddScoped<IUnallowCategoryForBlackRepository, UnallowCategoryForBlackRepository>();
-            //services.AddScoped<IExceptionalAppsInBlocksRepository, ExceptionalAppsInBlocksRepository>();
+    
             return services;
 
            }
