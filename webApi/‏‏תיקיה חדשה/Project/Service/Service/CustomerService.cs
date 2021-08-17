@@ -138,26 +138,12 @@ namespace Service
             }
         }
 
-     //CCustomers customers = GetAllCustomer().FirstOrDefault(a => a.UserId == Id && a.Username == name);
+ 
 
      
 
         
      
-
-       
-        //public static DbSet<Customers> getcustomer(int Id, string name)
-        //{
-        //    using (Database1Entities db = new Database1Entities())
-        //    {
-        //        var result = db.Customers;/*.First()(a => a.Username == name && a.UserId == Id)*/
-        //        return result;
-        //    }
-        //}
-        //public CCustomers getCustomer(int Id, string name)
-        //{
-        //    CCustomers result = from c in CustomersRepository.
-        //}
 
 
 
